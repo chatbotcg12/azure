@@ -81,8 +81,8 @@ app.post('/azure', function (req, response) {
         storageClient = new StorageManagementClient(credentials, subscriptionId);
         networkClient = new NetworkManagementClient(credentials, subscriptionId);
 		 response.setHeader('Content-Type', 'application/json');
-		 console.log("Display name ", req.body.queryResult);
-		console.log("Display name ", req.body.queryResult.intent.displayName);
+		 console.log("Query result of azure ", req.body.queryResult);
+		
         switch (req.body.queryResult.intent.displayName) {
   			
            case "createresourceonazure":	
